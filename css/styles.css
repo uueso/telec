@@ -323,7 +323,12 @@
     font-weight: 400;
     line-height: normal;
 }
-
+.excellently.excellently img {
+    transition: transform 0.3s linear;
+}
+.excellently:hover.excellently img{
+    transform: scale(1.1);
+}
 /* benefit section  */
 
 .section-benefit {
@@ -366,6 +371,14 @@
     display: flex;
     align-items: center;
     align-items: center;
+}
+
+.sub-item img {
+    transition: transform 0.3s linear;
+}
+
+.sub-item:hover img {
+    transform: scale(1.1);
 }
 
 .ben-con-item2 {
@@ -424,6 +437,10 @@
     position: relative;
     z-index: 1;
     bottom: -20px;
+    transition: transform 0.2s linear;
+}
+.price-container-svg:hover {
+    transform: scale(1.1);
 }
 
 .price-item {
@@ -623,6 +640,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    transition: background 0.3s linear;
+}
+.btn-footer:hover {
+    background: #300ebb;
 }
 
 @media screen and (max-width:1640px) {
