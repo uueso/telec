@@ -1,0 +1,1250 @@
+ body {
+    background-color: #fff;
+    margin: 0;
+    height: 100vh;    
+}
+
+ *,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+}
+
+ h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ p {
+    margin: 0;
+}
+.container {
+    max-width: 1580px;
+    width: 100%;
+    margin: 0 auto;
+}
+.page {
+    position: relative;
+}
+
+.page-login {
+    height: 100vh;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Inter;
+    font-size: 37px;
+    font-weight: 800;
+    line-height: 56px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.logo a {
+    font-family: Inter;
+    font-size: 37px;
+    font-weight: 800;
+    line-height: 56px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+    width: 100px;
+}
+
+.logo img {
+    margin-right: 15px;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+}
+.nav-links {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #5E6477;
+    text-decoration: none;
+
+    margin-right: 35px;
+    transition: color .2s linear;
+    cursor: pointer;
+    position: relative; 
+}
+.nav-links:hover {
+    color: #523EA3;
+}
+
+.nav-links.active {
+    color: #3C82F4;
+}
+
+.header-btn {
+    padding: 9px 28px;
+    background-color: #523EA3;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #fff;
+    transition: background-color .2s linear;
+    cursor: pointer;
+}
+
+.header-btn:hover {
+    background-color: #2b036b;
+}
+
+.header__burger {
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    position: relative;
+    z-index: 2;
+
+    display: none;
+  }
+
+.header__burger::before, 
+.header__burger::after  {
+    content:'';
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+
+    transition: transform 0.4s ease;
+  }
+
+.header__burger::after {
+    top: 0;
+  }
+
+.header__burger::before {
+    bottom: 0;
+  }
+
+.header__burger span {
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    top: 8px;
+    border-radius: 10px;
+
+    transition: opacity 0.4s ease;
+  }
+
+  /* animation for burger menu */
+
+  .header__burger.active::before {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+  .header__burger.active::after {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+  .header__burger.active span {
+    opacity: 0;
+  }
+
+  /* intro section  */
+
+.intro {
+    margin-top: 100px;
+    width: 100%;
+}
+.intro-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.intro-item {
+    width: 50%;
+}
+.intro-item:last-of-type {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 80px;
+}
+
+.intro-title {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    padding-top: 80px;
+    margin-bottom: 35px;
+}
+
+.intro-modern {
+    background: linear-gradient(271deg, #523EA3 -1.85%, #000 105.85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-family: Inter Tight;
+}
+
+.intro-telegram {
+    background: linear-gradient(271deg, #000 10.36%, #523EA3 66.08%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-family: Inter Tight;
+    position: relative;
+}
+
+.svg-intro-telegram1 {
+    position: absolute;
+    top: -10px;
+    left: -20px;
+}
+.svg-intro-telegram2 {
+    position: absolute;
+    bottom: -10px;
+    right: -26px;
+}
+
+.intro-btn {
+    padding: 16px 25px;
+    color: #523EA3;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+
+    background-color: transparent;
+    border-radius: 20px;
+    border: 5px solid #523EA3;
+    box-shadow: 4px 2px 8px -1px rgba(0, 0, 0, 0.25);
+    margin-bottom: 40px;
+    transition: border, color, background-color 0.3s linear;
+}
+
+.intro-btn svg path {
+    transition: fill .3s linear;
+}
+
+.intro-btn:hover {
+    color: #FFF;
+    background-color: #523EA3;
+}
+
+.intro-btn:hover svg path {
+    fill: #FFF;
+}
+
+.intro-text {
+    padding-top: 18px;
+    padding-bottom: 170px;
+    border-top: 5px solid rgba(0, 0, 0, 0.12);
+
+    color: rgba(0, 0, 0, 0.49);
+    font-family: Inter;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.arrow-intro {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* excellently section  */
+
+.section-excellently {
+    background-color: #6147CA;
+}
+
+.excellently {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.excellently-title {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.excellently-text {
+    color: rgba(255, 255, 255, 0.49);
+    font-family: Inter;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* benefit section  */
+
+.section-benefit {
+    padding: 75px 0;
+}
+
+.benefit-title {
+    color: #000;
+    font-family: Inter;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.ben-color {
+    background: linear-gradient(271deg, #523EA3 0.48%, #000 78.49%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Inter Tight;
+    font-weight: 500;
+}
+
+.benefit-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.sub-item {
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+
+.ben-con-item2 {
+    padding-left: 5px;
+}
+
+.ben-title {
+    color: #000;
+    font-family: Inter;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.ben-text {
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+/* section price  */
+
+.section-price {
+    background-color: #6147CA;
+    max-height: 580px;
+}
+
+.price-inner {
+    padding-top: 10px;
+}
+
+.price-title {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 75px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.price-content {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    margin-bottom: -100px;
+}
+
+.price-container-svg {
+    position: relative;
+    z-index: 1;
+    bottom: -20px;
+}
+
+.price-item {
+    padding: 80px 25px 15px 25px;
+    border-radius: 45px;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(125px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.svg-price1 {
+    fill: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(239, 239, 239, 0.00) 100%);
+    stroke-width: 1px;
+    stroke: #523EA3;
+    position: absolute;
+    /* bottom: 165px;
+    left: -100px; */
+    bottom: 28%;
+    left: -26%;
+    z-index: -1;
+}
+
+.svg-price2 {
+    fill: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(239, 239, 239, 0.00) 100%);
+    stroke-width: 1px;
+    stroke: #523EA3;
+    position: absolute;
+    /* top: -55px;
+    right: -95px; */
+    top: -10%;
+    right: -22%;
+    z-index: 1;
+}
+
+.item1 {
+    margin-top: 35px;
+}
+
+.item2 {
+    padding-top: 95px;
+}
+
+.item3 {
+    margin-top: 35px;
+}
+
+.price-suptitle {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.price-suptitle3 {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.price-font {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.price {
+    font-family: Inter;
+    text-align: center;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background: linear-gradient(267deg, #A18AFF 8.56%, #FFF 119.52%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+}
+
+.price-btn {
+    color: #FFF;
+    font-family: Inter Tight;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    margin: 0 auto;
+    padding: 12px 30px;
+
+    border-radius: 20px;
+    border: 3px solid #523EA3;
+    box-shadow: 4px 2px 8px -1px rgba(0, 0, 0, 0.25);
+    background-color: transparent;
+    margin-bottom: 45px;
+}
+
+.stroke1 {
+    height: 1px;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.20);
+    margin-bottom: 20px;
+}
+.stroke2 {
+    height: 1px;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.20);
+    margin-bottom: 20px;
+}
+.stroke3 {
+    height: 1px;
+    width: 60%;
+    background: rgba(0, 0, 0, 0.20);
+    margin-bottom: 20px;
+}
+.stroke4 {
+    height: 1px;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.20);
+    margin-bottom: 20px;
+}
+
+/* Footer  */
+
+.footer-inner {
+    padding-top: 190px;
+    padding-bottom: 90px;
+}
+
+.footer-title {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.footer-suptitle {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 35px;
+}
+
+.telegram-username {
+    border-radius: 26px;
+    border: 4px solid #523EA3;
+    padding: 25px 45px;
+    color: #000;
+    text-align: left;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    margin: 0 auto;
+    width: 630px;
+    margin-bottom: 35px;
+}
+  
+.telegram-username::placeholder {
+    color: black;
+}
+
+.btn-footer {
+    border-radius: 10px;
+    background: #523EA3;
+    padding: 25px 30px;
+    display: block;
+    margin: 0 auto;
+
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media screen and (max-width:1640px) {
+    .container {
+        max-width: 1440px;
+    }
+
+    /* Intro section  */
+    .intro-title {
+        font-size: 65px;
+    }
+    .intro-btn {
+        padding: 10px 20px;
+        font-size: 32px;
+    }
+    .intro-text {
+        font-size: 25px;
+    }
+
+    /* excellently section  */
+    .excellently-title {
+        font-size: 65px;
+    }
+    .excellently-text {
+        font-size: 25px;
+    }
+    .excellently-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Benefit section  */
+    .benefit-title {
+        font-size: 65px;
+    }
+    .ben-title {
+        font-size: 38px;
+    }
+    .ben-text {
+        font-size: 26px;
+    }
+    .ben-con-item img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Price section  */
+    .price-title {
+        font-size: 65px;
+    }
+    .price-content {
+        gap: 25px;
+    }
+    .price-suptitle3 {
+        font-size: 32px;
+    }
+    .price-suptitle {
+        font-size: 35px;
+    }
+    .price {
+        font-size: 80px;
+    }
+    .price-btn {
+        font-size: 22px;
+    }
+
+    /* Footer  */
+    .footer-title {
+        font-size: 65px;
+    }
+    .footer-suptitle {
+        font-size: 32px;
+    }
+    .telegram-username {
+        padding: 20px 35px;
+        width: 530px;
+    }
+    .btn-footer {
+        padding: 20px 25px;
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .container {
+        max-width: 1240px;
+    }
+
+    /* Intro section  */
+    .intro {
+        margin-top: 20px;
+    }
+    .intro-item img {
+        width: 530px;
+        height: 500px;
+    }
+    .intro-title {
+        font-size: 55px;
+    }
+    .intro-btn {
+        padding: 8px 15px;
+        font-size: 26px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        justify-content: space-between;
+    }
+    .intro-btn svg {
+        width: 40px;
+        height: auto;
+    }
+    .intro-text {
+        font-size: 20px;
+    }
+    .arrow-intro {
+        width: 28px;
+        height: 68px;
+    }
+
+    /* excellently section  */
+    .excellently-title {
+        font-size: 55px;
+    }
+    .excellently-text {
+        font-size: 20px;
+    }
+    .excellently-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Benefit section  */
+    .benefit-title {
+        font-size: 55px;
+    }
+    .ben-title {
+        font-size: 30px;
+    }
+    .ben-text {
+        font-size: 22px;
+    }
+    .ben-con-item img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Price section  */
+    .section-price {
+        max-height: 500px;
+    }
+    .price-title {
+        font-size: 55px;
+    }
+    .price-content {
+        gap: 25px;
+    }
+    .price-suptitle3 {
+        font-size: 26px;
+    }
+    .price-suptitle {
+        font-size: 30px;
+    }
+    .price {
+        font-size: 80px;
+    }
+    .price-btn {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+    .svg-price1 {
+        bottom: 25%;
+        left: -22%;
+    }
+    .svg-price2 {
+        top: -6%;
+        right: -12%;
+    }
+    .svg-price1, .svg-price2  {
+        width: 100px;
+        height: 160px;
+    }
+
+    /* Footer  */
+    .footer-title {
+        font-size: 55px;
+    }
+    .footer-suptitle {
+        font-size: 30px;
+    }
+    .telegram-username {
+        padding: 20px 30px;
+        width: 480px;
+    }
+    .btn-footer {
+        padding: 20px 25px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:1240px) {
+    .container {
+        max-width: 1080px;
+        padding: 0 20px;
+    }
+
+    /* Header  */
+    .nav-links {
+        font-size: 18px;
+    }
+    .header-btn {
+        padding: 9px 24px;
+        font-size: 18px;
+    }
+    
+    /* Intro section  */
+    .intro {
+        margin-top: 20px;
+    }
+    .intro-item img {
+        width: 430px;
+        height: 400px;
+    }
+    .intro-title {
+        font-size: 45px;
+    }
+    .intro-btn {
+        padding: 6px 12px;
+        font-size: 26px;
+        border-radius: 15px;
+        border-width: 3px;
+        margin-bottom: 25px;
+    }
+    .intro-btn svg {
+        width: 40px;
+        height: auto;
+    }
+    .intro-text {
+        font-size: 18px;
+    }
+    .arrow-intro {
+        width: 28px;
+        height: 68px;
+    }
+
+    /* excellently section  */
+    .excellently-title {
+        font-size: 45px;
+    }
+    .excellently-text {
+        font-size: 18px;
+    }
+    .excellently-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Benefit section  */
+    .benefit-title {
+        font-size: 45px;
+    }
+    .ben-title {
+        font-size: 26px;
+    }
+    .ben-text {
+        font-size: 18px;
+    }
+    .ben-con-item img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Price section  */
+    .section-price {
+        max-height: 400px;
+    }
+    .price-title {
+        font-size: 45px;
+    }
+    .price-content {
+        gap: 25px;
+    }
+    .price-suptitle3 {
+        font-size: 22px;
+    }
+    .price-suptitle {
+        font-size: 26px;
+    }
+    .price {
+        font-size: 60px;
+    }
+    .price-font {
+        font-size: 16px;
+    }
+    .price-btn {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .svg-price1, .svg-price2  {
+        width: 80px;
+        height: 140px;
+    }
+    .stroke1, .stroke2, .stroke3, .stroke4 {
+        margin-bottom: 10px;
+    }
+
+    /* Footer  */
+    .footer-inner {
+        padding-top: 160px;
+        padding-bottom: 60px;
+    }
+    .footer-title {
+        font-size: 45px;
+    }
+    .footer-suptitle {
+        font-size: 25px;
+    }
+    .telegram-username {
+        padding: 20px 30px;
+        width: 480px;
+    }
+    .btn-footer {
+        padding: 20px 25px;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .container {
+        padding: 0 20px;
+    }
+    .logo img {
+        margin-right: 10px;
+        width: 150px;
+        height: 33px;
+    }
+    .header {
+        margin: 0;
+        padding-top: 20px;
+    }
+    .header--fixed {
+        border-bottom: 1px solid #5E6477;
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+    
+        padding-bottom: 20px;
+        transform: translate3d(0, 0, 0);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        background-color: #A18AFF;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+    }
+    .nav-content {
+        display: none;
+    }
+    .header-login {
+        display: none;
+    }
+    .nav.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        overflow-y: none;
+        margin: 0;
+        padding: 30px 30px 100px auto;
+
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    } 
+    .nav.active ~ body:not(.signup, .login) .header {
+        margin-top: 0;
+    }
+    .nav.active .nav-content {
+        display: flex;
+        flex-direction: column;
+        order: 1;
+
+        position: relative;
+        bottom: 5%;
+    }
+    .nav.active .nav-links {
+        margin-right: 0;
+        margin-bottom: 20%;
+        color: #000000;
+    }
+    .nav.active .header-login {
+        display: flex;
+        order: 1;
+
+        position: absolute;
+        bottom: 25%;
+    }
+    .nav.active .logo {
+        display: none;
+    }
+    .nav.active  .header__burger {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .nav.active .header-login-text {
+        margin-right: 20px;
+    }
+    .header__burger {
+        display: block;
+    }
+    /* Intro section  */
+    .intro-inner {
+        flex-direction: column;
+    }
+    .intro-item {
+        width: 100%;
+    }
+    .intro-item:first-child {
+        order: 1;
+    }
+    .intro-item:last-of-type {
+        margin-bottom: 0;
+        justify-content: center;
+    }
+    .intro-title {
+        padding-top: 0;
+        font-size: 40px;
+        text-align: center;
+    }
+    .intro-text {
+        padding-bottom: 100px;
+        text-align: center;
+    }
+    .intro-btn {
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    /* excellently section  */
+    .excellently {
+        flex-direction: column;
+    }
+    .excellently-title {
+        font-size: 40px;
+        text-align: center;
+    }
+    .excellently-text {
+        font-size: 18px;
+        text-align: center;
+    }
+    .excellently-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Benefit section  */
+    .section-benefit {
+        padding: 55px 0;
+    }
+    .benefit-title {
+        font-size: 40px;
+    }
+    .ben-title {
+        font-size: 26px;
+    }
+    .ben-text {
+        font-size: 18px;
+    }
+    .ben-con-item img{
+        max-width: 100%;
+        height: auto;
+    }
+    .benefit-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .benefit-item {
+        gap: 30px;
+    }
+
+    /* Price section  */
+    .section-price {
+        max-height: max-content;
+    }
+    .price-content {
+        flex-direction: column;
+    }
+    .price-container-svg {
+        display: flex;
+        justify-content: center;
+    }
+    .price-item {
+        padding: 80px 100px 15px 100px;
+    }
+    .item3, .item1 {
+        margin-top: 0;
+    }
+    .svg-price1 {
+        top: -54px;
+        left: 186px;
+    }
+    .svg-price2 {
+        top: 15%;
+        right: 22%;
+    }
+    .price-title {
+        font-size: 40px;
+    }
+    .price-suptitle3 {
+        font-size: 22px;
+    }
+    .price-suptitle {
+        font-size: 26px;
+    }
+    .price {
+        font-size: 60px;
+    }
+    .price-font {
+        font-size: 16px;
+    }
+    .price-btn {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .svg-price1, .svg-price2  {
+        width: 80px;
+        height: 140px;
+    }
+    .stroke1, .stroke2, .stroke3, .stroke4 {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width:525px) {
+    /* Intro section  */
+    .intro-item img {
+        width: 330px;
+        height: 300px;
+    }
+    .intro-title {
+        font-size: 35px;
+    }
+    .intro-text {
+        font-size: 15px;
+    }
+    .svg-intro-telegram2, .svg-intro-telegram1 {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Excellently section  */
+    .excellently-title {
+        font-size: 35px;
+    }
+
+    /* Benefit section  */
+    .benefit-title {
+        font-size: 35px;
+    }
+    .sub-item {
+        flex-direction: column;
+    }
+    .ben-title {
+        text-align: center;
+    }
+    .ben-text {
+        text-align: center;
+    }
+
+    /* Price section  */
+    .price-title {
+        font-size: 35px;
+    }
+    .price-item {
+        padding: 80px 50px 15px 50px;
+    }
+    .price {
+        font-size: 40px;
+    }
+    .svg-price1 {
+        display: none;
+    }
+    .svg-price2 {
+        display: none;
+    }
+
+    /* Footer  */
+    .footer-title {
+        font-size: 35px;
+    }
+    .telegram-username {
+        width: 100%;
+        padding: 20px 15px;
+    }
+    .telegram-username::placeholder {
+        color: black;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .intro-title, .excellently-title, .benefit-title, .price-title, .footer-title {
+        font-size: 27px;
+    }
+    .excellently-text, .ben-text {
+        font-size: 15px;
+    }
+    .footer-suptitle {
+        font-size: 20px;
+    }
+    .telegram-username {
+        padding: 10px 15px;
+    }
+    .telegram-username::placeholder {
+        color: black;
+        font-size: 16px;
+    }
+}
